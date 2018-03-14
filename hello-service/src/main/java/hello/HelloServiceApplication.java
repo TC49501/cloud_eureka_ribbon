@@ -28,7 +28,7 @@ public class HelloServiceApplication {
    * @return
    */
   @RequestMapping(value = "/greeting")
-  @HystrixCommand(fallbackMethod = "getDataFallBack")
+  @HystrixCommand(fallbackMethod = "callFallBackMethod")
   public String greet() {
     log.info("Access /greeting");
 
@@ -40,7 +40,7 @@ public class HelloServiceApplication {
   }
 
   /**
-   * Ribbon client ping this endpoint every few seconds
+   * Ribbon client will ping this endpoint every few seconds
    * @return
    */
   @RequestMapping(value = "/")
@@ -50,10 +50,10 @@ public class HelloServiceApplication {
   }
 
   /**
-   *
+   * FallBack Method
    * @return
    */
-  public String getDataFallBack() {
+  public String callFallBackMethod() {
     return "Hystrix Fallback method invoked.";
   }
 

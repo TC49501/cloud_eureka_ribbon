@@ -32,10 +32,7 @@ public class ClientApplication {
   }
 
   @Autowired
-  RestTemplate restTemplate;
-
-  //@Autowired
-  //private LoadBalancerClient loadBalancer;
+  private LoadBalancerClient loadBalancer;
 
   /**
    * Expose REST endpoint
@@ -47,13 +44,26 @@ public class ClientApplication {
   public String hello(@RequestParam(value="name", defaultValue="Thiru") String name) {
     log.info("Access /hello");
 
-    //ServiceInstance serviceInstance=loadBalancer.choose("hello-service");
-    //System.out.println(serviceInstance.getUri());
-    //String baseUrl=serviceInstance.getUri().toString();
-    //baseUrl=baseUrl+"/greeting";
+    String greeting = restTemplate().getForObject("http://hello-service/greeting", String.class);
+    return String.format("%s, %s!", greeting, name);
+  }
 
-    String greeting = this.restTemplate.getForObject("http://hello-service/greeting", String.class);
-    //String greeting = this.restTemplate.getForObject(baseUrl, String.class);
+  /**
+   *
+   * @param name
+   * @return
+   */
+  @RequestMapping("/hello2")
+  public String hello2(@RequestParam(value="name", defaultValue="Thiru") String name) {
+    log.info("Access /hello2");
+
+    ServiceInstance serviceInstance = loadBalancer.choose("hello-service");
+    log.info(String.valueOf(serviceInstance.getUri()));
+
+    String baseUrl = serviceInstance.getUri().toString();
+    baseUrl = baseUrl+"/greeting";
+
+    String greeting = new RestTemplate().getForObject(baseUrl, String.class);
     return String.format("%s, %s!", greeting, name);
   }
 
