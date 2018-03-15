@@ -98,6 +98,7 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.inject.extensions:guice-multibindings:4.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.inject.extensions:guice-grapher:4.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.inject.extensions:guice-assistedinject:4.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.woodstox:woodstox-core-asl:4.4.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: javax.xml.stream:stax-api:1.0-2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.woodstox:stax2-api:3.1.4" level="project" />
@@ -110,6 +111,8 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.ribbon:ribbon-transport:2.2.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: io.reactivex:rxnetty-contexts:0.4.9" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: io.reactivex:rxnetty-servo:0.4.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.hystrix:hystrix-core:1.5.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.hdrhistogram:HdrHistogram:2.1.9" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: io.reactivex:rxnetty:0.4.9" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty-codec-http:4.0.27.Final" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty-codec:4.0.27.Final" level="project" />
@@ -120,6 +123,7 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: io.netty:netty-transport:4.0.27.Final" level="project" />
     <orderEntry type="library" name="Maven: com.netflix.ribbon:ribbon-core:2.2.0" level="project" />
     <orderEntry type="library" name="Maven: com.netflix.ribbon:ribbon-httpclient:2.2.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.netflix-commons:netflix-commons-util:0.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.netflix.ribbon:ribbon-loadbalancer:2.2.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.netflix-commons:netflix-statistics:0.1.1" level="project" />
@@ -128,17 +132,5 @@
     <orderEntry type="library" name="Maven: com.thoughtworks.xstream:xstream:1.4.9" level="project" />
     <orderEntry type="library" name="Maven: xmlpull:xmlpull:1.1.3.1" level="project" />
     <orderEntry type="library" name="Maven: xpp3:xpp3_min:1.1.4c" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-starter-hystrix:1.2.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.netflix.hystrix:hystrix-core:1.5.6" level="project" />
-    <orderEntry type="library" name="Maven: org.hdrhistogram:HdrHistogram:2.1.9" level="project" />
-    <orderEntry type="library" name="Maven: com.netflix.hystrix:hystrix-metrics-event-stream:1.5.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.netflix.hystrix:hystrix-serialization:1.5.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.fasterxml.jackson.module:jackson-module-afterburner:2.7.5" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.8.3" level="project" />
-    <orderEntry type="library" name="Maven: com.netflix.hystrix:hystrix-javanica:1.5.6" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.commons:commons-lang3:3.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.ow2.asm:asm:5.0.4" level="project" />
-    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.9" level="project" />
   </component>
 </module>

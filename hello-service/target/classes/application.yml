@@ -1,10 +1,12 @@
 spring:
   application:
     name: hello-service
-
+server:
+  port: 0
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8090/eureka
   instance:
+    preferIpAddress: true
     instanceId: ${spring.application.name}:${random.value}

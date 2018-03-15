@@ -1,10 +1,9 @@
 package hello;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.slf4j.Logger;
@@ -17,8 +16,8 @@ import java.util.*;
  */
 @RestController
 @SpringBootApplication
-@EnableCircuitBreaker
-@EnableDiscoveryClient
+//@EnableDiscoveryClient
+@EnableEurekaClient
 public class HelloServiceApplication {
 
   private static Logger log = LoggerFactory.getLogger(HelloServiceApplication.class);
@@ -28,7 +27,6 @@ public class HelloServiceApplication {
    * @return
    */
   @RequestMapping(value = "/greeting")
-  @HystrixCommand(fallbackMethod = "callFallBackMethod")
   public String greet() {
     log.info("Access /greeting");
 
@@ -47,14 +45,6 @@ public class HelloServiceApplication {
   public String home() {
     log.info("Access /");
     return "Ping!";
-  }
-
-  /**
-   * FallBack Method
-   * @return
-   */
-  public String callFallBackMethod() {
-    return "Hystrix Fallback method invoked.";
   }
 
   /**

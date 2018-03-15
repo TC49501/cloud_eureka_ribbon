@@ -13,6 +13,6 @@ eureka:
 hello-service:
   ribbon:
     eureka:
-      enabled: true
+      enabled: false
     listOfServers: localhost:8091,localhost:8092
     ServerListRefreshInterval: 15000
