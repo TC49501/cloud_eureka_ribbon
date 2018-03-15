@@ -22,6 +22,8 @@ Our "server" service is called Say Hello-Service. It will return a random greeti
 == Access from a client service
 
 The Hello-Client application will be what our user sees. It will make a call to the Hello-Service application to get a greeting and then send that to our user when the user visits the endpoint at `/hello`.
+http://localhost:8093/hystrix/
+http://localhost:8093/hystrix.stream
 
 == Load balance across server instances
 
