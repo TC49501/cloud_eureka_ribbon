@@ -1,13 +1,10 @@
 package hello;
 
+import com.netflix.loadbalancer.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 
 import com.netflix.client.config.IClientConfig;
-import com.netflix.loadbalancer.IPing;
-import com.netflix.loadbalancer.IRule;
-import com.netflix.loadbalancer.PingUrl;
-import com.netflix.loadbalancer.AvailabilityFilteringRule;
 
 /**
  * Ribbon custom Configuration
@@ -34,7 +31,7 @@ public class RibbonConfiguration {
    */
   @Bean
   public IRule ribbonRule(IClientConfig config) {
-    return new AvailabilityFilteringRule();
+    return new FDAvailabilityFilteringRule();
   }
 
 }
